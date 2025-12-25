@@ -82,11 +82,11 @@ PYBIND11_MODULE(meshtaichi_patcher_core, m) {
         Some other explanation about the subtract function.
     )pbdoc");
 
-#ifdef VERSION_INFO
-    m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
-#else
-    m.attr("__version__") = "dev";
-#endif
+//#ifdef VERSION_INFO
+//    m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
+//#else
+//    m.attr("__version__") = "dev";
+//#endif
 
     m.def("run_mesh", &MeshTaichi::run_mesh);
     py::class_<MeshTaichi::Patcher>(m, "Patcher")
